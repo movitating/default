@@ -44,4 +44,13 @@ export default defineConfig({
   },
   appType: 'mpa', // fallback 사용안함
   plugins: [tailwindcss()],
+  resolve: {
+    alias: [
+      { find: '@', replacement: '/src' },
+      { find: '@features', replacement: '/src/features' },
+      { find: '@pages', replacement: '/src/pages' },
+      { find: '@shared', replacement: '/src/shared' },
+      { find: '@widgets', replacement: '/src/widgets' },
+    ],
+  },
 });
